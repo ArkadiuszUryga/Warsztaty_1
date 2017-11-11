@@ -15,14 +15,17 @@ public class Game1 {
 		int check=0;
 		while	(check!=1)	{
 			int a =getInt("Podaj liczbę");
-			if	(a>rnd) {
+			if (a<1 || a>100)	{
+				System.out.println("Przeczytaj jeszcze raz. Liczba z zakresu 1-100!!!!!!");
+			}
+			if	(a>rnd && (a>0 || a<100)) {
 				System.out.println("Podana liczba jest za duża. Spróbuj ponownie");
 			}
-			else if	(a<rnd) {
+			else if	(a<rnd && (a>0 || a<100)) {
 				System.out.println("Podana liczba jest za mała. Spróbuj ponownie");
 			}
 			else	{
-				System.out.println("Udało Ci się zgadnąć. Bravo Bystrzaku!");
+				System.out.println("Udało Ci się zgadnąć. Bravo!");
 				check=1;
 			}
 		}
